@@ -23,3 +23,11 @@
 	<li><code>-100 &lt;= matrix[i][j] &lt;= 100</code></li>
 </ul>
 </div>
+
+##  Notes
+
+Start at top left we go to the right then down left then we go up. We see that by doing so we traversed the outermost ring (of sorts) of the rectangle. Then we are left with a rectangle in the middle in which we have to perform the same algorithm again.
+
+We had an intial left, right, top and bottom boundary. Once we traverse the outermost layer, we bring these boundaries inward to form the inner rectangle on which the algorithm is iterated again. 
+
+The algorithm stops when we don't have an inner rectangle anymore, ie. when any of the boundaries meet.
